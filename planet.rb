@@ -3,12 +3,14 @@ require_relative 'ZOrder'
 class Planet
 
 	def initialize
-		 @sun = Gosu::Image("images/sun.png")
 		 @x = x
 		 @y = y
+		 @vel_x = vel_x
+		 @vel_y = vel_y
+		 @mass = mass
+		 @planet = planet
 	end
 	def draw
-		@sun.draw(x, y, ZOrder)
-		
+		@sun(x, y, ZOrder::Planet)
 	end
 end
